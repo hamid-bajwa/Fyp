@@ -80,3 +80,30 @@
 }
 
 
+
+
+/* Contact component */
+
+
+
+
+.message {
+  background: transparent;
+  border: 2px solid #7a7c80;
+  padding: 15px;
+  padding-bottom: 95px;
+  border-radius: 15px;
+  color: #ffffff;
+}
+
+.message:focus {
+  background: transparent;
+  border: 2px solid white;
+  box-shadow: none;
+
+  color: #ffffff;
+}
+
+.message::placeholder {
+  color: #ffffff;
+}
