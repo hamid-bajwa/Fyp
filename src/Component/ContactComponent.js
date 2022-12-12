@@ -1,6 +1,6 @@
 import { Button } from "bootstrap";
 import React from "react";
-import { Card, CardBody, Col, Row } from "reactstrap";
+import { Card, CardBody, Col, Input, Row } from "reactstrap";
 
 // Css properties in homeComponent.css
 function Contact() {
@@ -16,81 +16,86 @@ function Contact() {
           />
         </h2>
       </Row>
-      
 
-<Card className="mb-4">
-    <CardBody className="m-2 mb-3">
-      <form className="form ">
-        <Row>
-          <Col lg="6">
-            <div className="form-group">
-              <label className="p-1 mb-1 px-1">Your Name</label>
-              <input
-                className="input2 mb-3 form-control"
-                placeholder="Your Name"
-              ></input>
-            </div>
-          </Col>
+      <Card className="mb-4">
+        <CardBody className="m-2 mb-3">
+          <form className="form ">
+            <Row>
+              <Col lg="6">
+                <div className="form-group">
+                  <label className="p-1 mb-1 px-1">Your Name</label>
+                  <input
+                    className="input2 mb-3 form-control"
+                    placeholder="Your Name"
+                  ></input>
+                </div>
+              </Col>
 
-          <Col lg="6">
-            <div className="form-group">
-              <label className="p-1 mb-1 px-1">Your Email</label>
-              <input
-                className="input2  mb-3 form-control"
-                placeholder="Your Email"
-              ></input>
-            </div>
-          </Col>
-        </Row>
+              <Col lg="6">
+                <div className="form-group">
+                  <label className="p-1 mb-1 px-1">Your Email</label>
+                  <input
+                    className="input2  mb-3 form-control"
+                    placeholder="Your Email"
+                  ></input>
+                </div>
+              </Col>
+            </Row>
 
-        <Row>
-          <Col lg="6">
-            <div className="form-group">
-              <label className="p-1 mb-1 px-1">What your are interested</label>
-              <input
+            <Row>
+              <Col lg="6">
+                <div className="form-group ">
+                  <label className="p-1 mb-1 px-1">
+                    What your are interested
+                  </label>
+
+                  <Input className="mb-3 select" type="select">
+                    <option selected>Select Option</option>
+                    <option>Suggestion</option>
+                    <option>Complaint</option>
+                  </Input>
+
+                  {/* <input
                 className="input2 mb-3 form-control"
                 placeholder="Suggestion or Complaint"
-              ></input>
-            </div>
-          </Col>
+              ></input> */}
+                </div>
+              </Col>
 
-          <Col lg="6">
-            <div className="form-group">
-              <label className="p-1 mb-1 px-1">Phone Number</label>
-              <input
-                className="input2 phone mb-3 form-control"
-                placeholder="Phone Number"
-              ></input>
-            </div>
-          </Col>
-        </Row>
+              <Col lg="6">
+                <div className="form-group">
+                  <label className="p-1 mb-1 px-1">Phone Number</label>
+                  <input
+                    className="input2 mb-3 form-control"
+                    placeholder="Phone Number"
+                  ></input>
+                </div>
+              </Col>
+            </Row>
 
-        <Row>
-          <Col lg="12">
-            <div className="form-group">
-              <label className="p-1 mb-1 px-1">Message</label>
-              <textarea
-                type="text"
-                className="message  mb-4 form-control "
-                placeholder="Your message"
-              ></textarea>
-            </div>
-          </Col>
-        </Row>
-        <Row>
-            <div className="d-grid gap-2 d-md-flex justify-content-center">
-                  <button className="btn-warning btn text-right btn-lg">Just Send <i class="fa-solid fa-location-arrow"></i></button>
-            </div>
-        </Row>
-
-
-      
-      </form>
-
-      </CardBody>
+            <Row>
+              <Col lg="12">
+                <div className="form-group">
+                  <label className="p-1 mb-1 px-1">Message</label>
+                  <textarea
+                    type="text"
+                    className="message  mb-4 form-control "
+                    placeholder="Your message"
+                  ></textarea>
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <div className="d-grid gap-2 d-md-flex justify-content-center">
+                <button className="btn-warning btn text-right btn-lg">
+                  Just Send <i class="fa-solid fa-location-arrow"></i>
+                </button>
+              </div>
+            </Row>
+          </form>
+        </CardBody>
       </Card>
     </div>
-    
   );
 }
 

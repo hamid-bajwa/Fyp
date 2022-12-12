@@ -107,3 +107,27 @@
 .message::placeholder {
   color: #ffffff;
 }
+
+
+.select{
+  background: transparent;
+  border: 2px solid #7a7c80;
+  padding: 15px;
+  border-radius: 15px;
+  color: #ffffff;
+}
+.select option{
+  color: #ffffff;
+  background-color: #374661;
+}
+.select:focus {
+  background: transparent;
+  border: 2px solid white;
+  box-shadow: none;
+
+  color: #ffffff;
+}
+
+.select::placeholder {
+  color: #ffffff;
+}
