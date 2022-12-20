@@ -14,7 +14,7 @@ function Contact() {
   });
 
   const onChange = (e) => {
-    setFormValue({ ...formValue, [e.target.name]: e.target.value });
+    setFormValue({ ...formValue, [e.target]: e.target.value });
   };
 
 
@@ -69,16 +69,15 @@ function Contact() {
                   <label className="p-1 mb-1 px-1">
                     What your are interested
                   </label>
-
+                  
+             
                   <Input
                     className="mb-3 select"
                     type="select"
                     id="validationCustomInterested"
-                    value={formValue.interested}
                     name="Interested"
-                    onChange={onChange}
                   >
-                    <option selected>Select Option</option>
+                    <option>Select Option</option>
                     <option>Suggestion</option>
                     <option>Complaint</option>
                   </Input>
