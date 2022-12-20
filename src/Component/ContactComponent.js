@@ -1,9 +1,24 @@
-import { Button } from "bootstrap";
-import React from "react";
+
+import React, { useState } from "react";
 import { Card, CardBody, Col, Input, Row } from "reactstrap";
+
 
 // Css properties in homeComponent.css
 function Contact() {
+  const [formValue, setFormValue] = useState({
+    name: "",
+    email: "",
+    interested: "",
+    phoneNumber: "",
+    message: "",
+  });
+
+  const onChange = (e) => {
+    setFormValue({ ...formValue, [e.target.name]: e.target.value });
+  };
+
+
+
   return (
     <div className="container mt-5">
       <Row className="mb-1 p-2">
@@ -19,16 +34,18 @@ function Contact() {
 
       <Card className="mb-4">
         <CardBody className="m-2 mb-3">
-          <form className="form ">
+          <form className="form needs-validation "  novalidate>
             <Row>
               <Col lg="6">
-                <div className="form-group">
-                  <label className="p-1 mb-1 px-1">Your Name</label>
-                  <input
-                    className="input2 mb-3 form-control"
-                    placeholder="Your Name"
-                  ></input>
-                </div>
+                  <label className="p-1 mb-1 px-1 ">Your Name</label>
+                    <input
+                      className="input2 mb-3 form-control"
+                      placeholder="Your Name"
+                      id="validationCustomName"
+                      value={formValue.name}
+                      name="name"
+                      onChange={onChange}
+                    ></input>
               </Col>
 
               <Col lg="6">
@@ -37,6 +54,10 @@ function Contact() {
                   <input
                     className="input2  mb-3 form-control"
                     placeholder="Your Email"
+                    id="validationCustomEmail"
+                    value={formValue.email}
+                    name="email"
+                    onChange={onChange}
                   ></input>
                 </div>
               </Col>
@@ -49,7 +70,14 @@ function Contact() {
                     What your are interested
                   </label>
 
-                  <Input className="mb-3 select" type="select">
+                  <Input
+                    className="mb-3 select"
+                    type="select"
+                    id="validationCustomInterested"
+                    value={formValue.interested}
+                    name="Interested"
+                    onChange={onChange}
+                  >
                     <option selected>Select Option</option>
                     <option>Suggestion</option>
                     <option>Complaint</option>
@@ -68,6 +96,10 @@ function Contact() {
                   <input
                     className="input2 mb-3 form-control"
                     placeholder="Phone Number"
+                    id="validationCustomPhone"
+                    value={formValue.phoneNumber}
+                    name="phoneNumber"
+                    onChange={onChange}
                   ></input>
                 </div>
               </Col>
@@ -81,13 +113,20 @@ function Contact() {
                     type="text"
                     className="message  mb-4 form-control "
                     placeholder="Your message"
+                    id="validationCustomMessage"
+                    value={formValue.message}
+                    name="message"
+                    onChange={onChange}
                   ></textarea>
                 </div>
               </Col>
             </Row>
             <Row>
               <div className="d-grid gap-2 d-md-flex justify-content-center">
-                <button className="btn-warning btn text-right btn-lg">
+                <button
+                  className="btn-warning btn text-right btn-lg"
+                  type="submit"
+                >
                   Just Send <i class="fa-solid fa-location-arrow"></i>
                 </button>
               </div>

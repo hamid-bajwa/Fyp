@@ -3,20 +3,43 @@
   margin: 0 ;
 }
 .searchContainer{
-     background-image: url(/public/Assets/bg_image.jpg); 
-    height: 50vh;
+    background-image: url(/public/Assets/bg_image.jpg); 
     margin-left: -15px;
-    
     margin-right: -13px;
-    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #1F2D47;
-    padding-top: 4rem;
 
 }
+
+
+@media screen and (min-width: 480px) {
+  .searchContainer { 
+    height: 70vh;
+    padding-top: 0rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .searchContainer {
+    height: 50vh;
+    padding-top: 4rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .searchContainer {
+    height: 50vh;
+    padding-top: 4rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .searchContainer {
+    height: 50vh;
+    padding-top: 4rem;
+  }
+}
 .searchPanel{}
+
+
 
 
 .hr{
